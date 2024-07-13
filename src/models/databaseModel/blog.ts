@@ -24,8 +24,13 @@ const blogSchema = new Schema<IBlog>({
       },
     },
   ],
+  isDeleted: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
 });
 
 const Blog = mongoose.model<IBlog>("Blog", blogSchema);
 
-export { Blog};
+export { Blog };

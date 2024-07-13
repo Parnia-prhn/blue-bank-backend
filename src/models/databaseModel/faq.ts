@@ -18,10 +18,20 @@ const faqSchema = new Schema<IFaq>({
         required: false,
         default: " ",
       },
+      isDeleted: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
   ],
+  isDeleted: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
 });
 
 const Faq = mongoose.model<IFaq>("Faq", faqSchema);
 
-export { Faq};
+export { Faq };

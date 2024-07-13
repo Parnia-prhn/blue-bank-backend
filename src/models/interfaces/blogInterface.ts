@@ -1,10 +1,9 @@
-import { Document} from "mongoose";
+import { Document } from "mongoose";
 
 interface IBlog extends Document {
   title: string;
   coverPictureUrl: string;
-  text: 
-  { paragraph: string,
-    imageUrl:string }[];
+  text: { paragraph: string; imageUrl: string }[];
+  isDeleted: boolean;
 }
-export {IBlog};
+export { IBlog };
