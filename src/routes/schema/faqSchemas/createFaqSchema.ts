@@ -1,5 +1,5 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { CreateFaq } from "src/routes/controllers/Faq/createFaqController";
+import { CreateFaq } from "controllers/Faq/createFaqController";
 async function ControllerOnCreateFaqController(
   request: Request,
   response: Reply,

@@ -1,5 +1,5 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { DeleteFaq } from "src/routes/controllers/Faq/deleteFaqController";
+import { DeleteFaq } from "controllers/Faq/deleteFaqController";
 async function ControllerOnDeleteFaqController(
   request: Request,
   response: Reply,

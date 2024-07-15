@@ -1,5 +1,5 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { CreateBlog } from "src/routes/controllers/Blog/createBlogController";
+import { CreateBlog } from "controllers/Blog/createBlogController";
 async function ControllerOnCreateBlogController(
   request: Request,
   response: Reply,
