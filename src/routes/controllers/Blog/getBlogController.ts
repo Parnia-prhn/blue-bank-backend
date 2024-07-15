@@ -1,10 +1,23 @@
 import { Blog } from "src/models/databaseModel/blog";
 import { IBlog } from "src/models/interfaces/blogInterface";
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-async function GetAllBlogs(req: Request, reply: Reply): Promise<void> {
+import { paginate } from "src/services/pagination";
+
+interface BlogQuery {
+  page?: number;
+  pageSize?: number;
+}
+
+async function GetAllBlogs(
+  req: Request<{ Querystring: BlogQuery }>,
+  reply: Reply,
+): Promise<void> {
+  const page = req.query.page || 1;
+  const pageSize = req.query.pageSize || 6;
+
   try {
-    const blogs: IBlog[] = await Blog.find({ isDeleted: false });
-    reply.status(200).send(blogs);
+    const result = await paginate(Blog, { page, pageSize });
+    reply.status(200).send(result);
   } catch (err) {
     reply.status(500).send({ error: "Internal server error" });
   }

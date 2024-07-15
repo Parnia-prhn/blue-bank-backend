@@ -1,7 +1,16 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
 import { GetAllBlogs } from "src/routes/controllers/Blog/getBlogController";
+// Define the expected query parameters interface
+interface BlogQuery {
+  page: number;
+  pageSize: number;
+}
+
+// Define the request type with the expected query parameters
+type BlogRequest = Request<{ Querystring: BlogQuery }>;
+
 async function ControllerOnGetAllBlogsController(
-  request: Request,
+  request: BlogRequest,
   response: Reply,
   //done: (error?: Error) => {},
 ) {
