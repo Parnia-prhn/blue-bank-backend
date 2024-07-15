@@ -14,12 +14,20 @@ import {
   ControllerOnUpdateBlogController,
   preHandlerOnUpdateBlogController,
 } from "./updateBlogSchema";
-
+import {
+  ControllerOnGetBlogPostController,
+  preHandlerOnGetBlogPostController,
+} from "./getBlogPostSchema";
 function blogRoutes(fastify: any, options: any, done: any) {
   fastify.get(
     "/blogs/getAll",
     preHandlerOnGetAllBlogsController,
     ControllerOnGetAllBlogsController,
+  );
+  fastify.get(
+    "/blogs/:blogId",
+    preHandlerOnGetBlogPostController,
+    ControllerOnGetBlogPostController,
   );
   fastify.post(
     "/blogs/create",

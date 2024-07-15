@@ -12,6 +12,11 @@ const blogSchema = new Schema<IBlog>({
   },
   text: [
     {
+      title: {
+        type: String,
+        required: false,
+        default: " ",
+      },
       paragraph: {
         type: String,
         required: false,
