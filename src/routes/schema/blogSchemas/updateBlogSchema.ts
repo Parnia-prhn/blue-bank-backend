@@ -1,5 +1,5 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { UpdateBlog } from "src/routes/controllers/Blog/updateBlogController";
+import { UpdateBlog } from "../../../controllers/Blog/updateBlogController";
 async function ControllerOnUpdateBlogController(
   request: Request,
   response: Reply,

@@ -1,7 +1,7 @@
-import { Blog } from "src/models/databaseModel/blog";
-import { IBlog } from "src/models/interfaces/blogInterface";
+import { Blog } from "../../models/databaseModel/blog";
+import { IBlog } from "../../models/interfaces/blogInterface";
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { paginate } from "src/services/pagination";
+import { paginate } from "../../services/pagination";
 
 interface BlogQuery {
   page?: number;

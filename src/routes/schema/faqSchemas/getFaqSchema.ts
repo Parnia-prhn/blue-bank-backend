@@ -1,5 +1,5 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { GetAllFaqs } from "src/routes/controllers/Faq/getFaqController";
+import { GetAllFaqs } from "../../../controllers/Faq/getFaqController";
 async function ControllerOnGetAllFaqsController(
   request: Request,
   response: Reply,

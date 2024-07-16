@@ -1,5 +1,5 @@
-import { Faq } from "src/models/databaseModel/faq";
-import { IFaq } from "src/models/interfaces/faqInterface";
+import { Faq } from "../../models/databaseModel/faq";
+import { IFaq } from "../../models/interfaces/faqInterface";
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
 async function GetAllFaqs(req: Request, reply: Reply): Promise<void> {
   try {

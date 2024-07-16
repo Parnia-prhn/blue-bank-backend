@@ -1,9 +1,9 @@
-import { Faq } from "src/models/databaseModel/faq";
-import { IFaq } from "src/models/interfaces/faqInterface";
+import { Faq } from "../../models/databaseModel/faq";
+import { IFaq } from "../../models/interfaces/faqInterface";
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
 
 async function CreateFaq(req: Request, reply: Reply): Promise<void> {
-  const { question, answer } = req.body as IFaq["items"];
+  const { subject, items } = req.body as IFaq;
   try {
     const newFaq: IFaq | null = new Faq({
       subject,

@@ -1,5 +1,5 @@
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
-import { GetAllBlogs } from "src/routes/controllers/Blog/getBlogController";
+import { GetAllBlogs } from "../../../controllers/Blog/getBlogController";
 // Define the expected query parameters interface
 interface BlogQuery {
   page: number;
