@@ -17,7 +17,7 @@ async function GetAllBlogs(
 
   try {
     const result = await paginate(Blog, { page, pageSize });
-    reply.status(200).send(result);
+    reply.status(200).send(result.data);
   } catch (err) {
     reply.status(500).send({ error: "Internal server error" });
   }

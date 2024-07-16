@@ -1,5 +1,4 @@
 import { Model } from "mongoose";
-
 interface PaginationOptions {
   page: number;
   pageSize: number;
