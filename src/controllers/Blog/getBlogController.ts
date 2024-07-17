@@ -1,5 +1,4 @@
 import { Blog } from "../../models/databaseModel/blog";
-import { IBlog } from "../../models/interfaces/blogInterface";
 import { FastifyRequest as Request, FastifyReply as Reply } from "fastify";
 import { paginate } from "../../services/pagination";
 

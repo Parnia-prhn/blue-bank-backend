@@ -13,7 +13,7 @@ async function DeleteFaq(req: Request, reply: Reply): Promise<void> {
       reply.status(404).send({ error: "faq not found" });
       return;
     }
-    const deletedFaq: IFaq | null = await Faq.findByIdAndUpdate(
+    await Faq.findByIdAndUpdate(
       { faqId },
       {
         isDeleted: true,
