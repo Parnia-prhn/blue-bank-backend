@@ -1,6 +1,7 @@
 import fastify from "fastify";
 import path from "path";
 import { config, register } from "./configs";
+
 //import { redisClient } from "./database/redis";
 
 export const isDev = process.env.NODE_ENV !== "production";
@@ -10,6 +11,7 @@ else config({ path: path.resolve(process.cwd(), "prod.env") });
 const server = fastify();
 //#region add cors to app
 register(server);
+
 // server.get("/", async (request: any, reply: any) => {});
 server.listen(
   { port: +process.env.PORT!, host: process.env.HOST! },

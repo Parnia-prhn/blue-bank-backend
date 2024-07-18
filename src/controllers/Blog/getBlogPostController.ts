@@ -6,6 +6,7 @@ async function GetBlogPost(req: Request, reply: Reply): Promise<void> {
     blogId?: string;
   }
   const params = req.params as paramsType;
+
   const blogId = params.blogId;
 
   try {
@@ -16,7 +17,7 @@ async function GetBlogPost(req: Request, reply: Reply): Promise<void> {
     }
     reply.status(200).send(blog);
   } catch (err) {
-    reply.status(500).send({ error: "Internal server error" });
+    reply.status(500).send({ error: "Internal server error!!!!!!" });
   }
 }
 export { GetBlogPost };
